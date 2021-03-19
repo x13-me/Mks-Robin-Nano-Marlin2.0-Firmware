@@ -67,7 +67,7 @@
 #define X_STOP_PIN                          PA15
 #define Y_STOP_PIN                          PA12
 #define Z_MIN_PIN                           PA11
-#define Z_MAX_PIN                           PC4
+#define Z_MIN_PROBE_PIN                           PC4
 
 //
 // Steppers
@@ -112,6 +112,9 @@
 
   #define E0_SERIAL_TX_PIN                  PC13
   #define E0_SERIAL_RX_PIN                  PC13
+
+  #define E1_SERIAL_TX_PIN                  PD8
+  #define E1_SERIAL_RX_PIN                  PD8
 
   // Reduce baud rate to improve software serial reliability
   #define TMC_BAUD_RATE                    19200
@@ -183,7 +186,7 @@
   #define WIFI_RESET_PIN                    PA5   // MKS ESP WIFI RESET PIN
 #else
   //#define POWER_LOSS_PIN                  PA2   // PW_DET
-  //#define PS_ON_PIN                       PB2   // PW_OFF
+  #define PS_ON_PIN                       PB2   // PW_OFF
   #define FIL_RUNOUT_PIN                    PA4
   #define FIL_RUNOUT2_PIN                   PE6
 #endif
